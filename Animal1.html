@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>청설모</title>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <nav class="top-navbar">
+        <a href="index.html" class="nav-button">메인 홈</a>
+        <a href="Animal1.html" class="nav-button">청설모</a>
+        <a href="Animal2.html" class="nav-button">고라니</a>
+        <a href="Animal3.html" class="nav-button">멧비둘기</a>
+        <a href="Animal4.html" class="nav-button">너구리</a>
+        <a href="Animal5.html" class="nav-button">왜가리</a>
+        <a href="quiz.html" class="nav-button">공존 퀴즈</a>
+   </nav>
+
+<img src="청설모1.png" alt="청설모 이미지" class="animal1-1-image">
+
+
+
+
+
+ <div class="title">
+    <h1>청설모</h1>
+    
+    </div> 
+    
+    
+    <div class="center-dropdown2-wrapper">
+    <div class="dropdown">
+        <a href="#" class="dropbtn center-nav-item">다른 동물 보러가기</a>
+        
+        <div class="dropdown-content center-dropdown-content">
+            <a href="Animal2.html">고라니</a>
+            <a href="Animal3.html">멧비둘기</a>
+            <a href="Animal4.html">너구리</a>
+            <a href="Animal5.html">왜가리</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="text1">
+    <h2>청설모에 대하여</h2><br>
+    <p>
+ 청설모는 우리나라 전역의 산림 지역에서 서식하는 설치류이다. 다람쥐에 비해 몸집이 크고 <br>귀 끝에 털이 뾰족하게 솟아있는 것이 특징으로 주로 도토리, 잣, 밤 등 단단한 나무 열매와 <br>씨앗류를 먹으며, 겨울철을 대비하여 땅속에 먹이를 숨겨두는 습성이 있다. 최근에는 도시의 <br>공원이나 주택가에서도 먹이를 찾아 활동하는 모습을 비교적 쉽게 발견할 수 있다.<br><br>
+
+청설모에게 먹이를 주는 행위는 사람을 향한 의존성을 키우고 주택 출몰 빈도를 높여 <br>쓰레기통을 뒤지는 등의 문제가 발생하므로 지양해야한다. <br><br>또 청설모의 서식지에서 청설모를 만나도 적정 거리를 유지하며 가까이 접근하지 않아야 한다.
+    </p>
+</div>
+
+
+
+
+
+	<style>
+	/* 브라우저 마진과 패딩 리셋 */
+	* {margin:0;padding:0;}
+
+	/* INPUT 가리기 */
+/* 🌟🌟🌟 수정 1: 슬라이드 영역의 크기 및 절대 위치 지정 (350x350) 🌟🌟🌟 */
+	.section .slidewrap {
+	    max-width:900px; /* 가로 최대 크기 제한 */
+	    width: 660px; /* 고정 가로 크기 */
+	    height: 700px; /* 고정 세로 크기 */
+	    
+	    position: absolute; /* 위치 지정 방식 */
+	    top: 120px; /* 상단에서 100px */
+	    right: 10px; /* 왼쪽에서 50px */
+	    
+	    margin: 0; /* 기존 중앙 정렬 마진 제거 */
+	    overflow:hidden;
+	}
+	
+	/* 🌟🌟🌟 수정 2: 슬라이드 목록 및 아이템 높이 지정 🌟🌟🌟 */
+	.section .slidelist {
+	    white-space:nowrap;
+	    font-size:0;
+	    height: 700px; /* slidewrap 높이에 맞춤 */
+	}
+	.section .slidelist > li {
+	    display:inline-block;
+	    vertical-align:middle;
+	    width:100%;
+	    height: 700px; /* slidewrap 높이에 맞춤 */
+	    transition:all .5s;
+	}
+	.section .slidelist > li > a {
+	    display:block;
+	    position:relative;
+	    height: 100%; /* li 높이에 맞춤 */
+	}
+    
+    /* 🌟🌟🌟 추가: 이미지가 잘리지 않도록 (contain) 설정 🌟🌟🌟 */
+    .section .slidelist > li > a > img {
+        width: 100%;
+        height: 100%;
+        /* 이미지가 잘리지 않도록 (contain), 영역 내에 모두 표시합니다. */
+        object-fit: contain; 
+    }
+
+
+	/* 좌우로 넘기는 LABEL버튼에 대한 스타일 */
+	.section .slide-control {position:absolute;top:0;left:0;z-index:10;width:100%;height:100%;}
+	.section .slide-control label {position:absolute;z-index:1;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+	.section .slide-control .left {left:30px;background:url('./img/left.png') center center / 100% no-repeat;}
+	.section .slide-control .right {right:30px;background:url('./img/right.png') center center / 100% no-repeat;}
+	.section .slide-control [class*="control"] {display:none;}
+
+	/* INPUT이 체크되면 변화값이 li까지 전달되는 스타일 */
+	.section [id="청설모2"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+	.section [id="청설모3"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+	.section [id="청설모4"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+	
+	/* INPUT이 체크되면 변화값이 좌우 슬라이드 버튼을 담고 있는 div 까지 전달되는 스타일 */
+	.section [id="청설모2"]:checked ~ .slidewrap .control01 {display:block;}
+	.section [id="청설모3"]:checked ~ .slidewrap .control02 {display:block;}
+	.section [id="청설모4"]:checked ~ .slidewrap .control03 {display:block;}
+	</style>
+</head>
+<body>
+<div class="section">
+	<input type="radio" name="slide" id="청설모2" checked>
+	<input type="radio" name="slide" id="청설모3">
+	<input type="radio" name="slide" id="청설모4">
+	<div class="slidewrap">
+		<ul class="slidelist">
+			<li>
+				<a>
+					<img src="./img/청설모2.jpg">
+				</a>
+			</li>
+			<li>
+				<a>
+					<img src="./img/청설모3.jpg">
+				</a>
+			</li>
+			<li>
+				<a>
+					<img src="./img/청설모4.jpg">
+				</a>
+			</li>
+		</ul>
+
+		<div class="slide-control">
+			<div class="control01">
+				<label for="청설모4" class="left"></label>
+				<label for="청설모3" class="right"></label>
+			</div>
+			<div class="control02">
+				<label for="청설모2" class="left"></label>
+				<label for="청설모4" class="right"></label>
+			</div>
+			<div class="control03">
+				<label for="청설모3" class="left"></label>
+				<label for="청설모2" class="right"></label>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>멧비둘기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <nav class="top-navbar">
+        <a href="index.html" class="nav-button">메인 홈</a>
+        <a href="Animal1.html" class="nav-button">청설모</a>
+        <a href="Animal2.html" class="nav-button">고라니</a>
+        <a href="Animal3.html" class="nav-button">멧비둘기</a>
+        <a href="Animal4.html" class="nav-button">너구리</a>
+        <a href="Animal5.html" class="nav-button">왜가리</a>
+        <a href="quiz.html" class="nav-button">공존 퀴즈</a>
+   </nav>
+
+<img src="멧비둘기1.png" alt="멧비둘기 이미지" class="animal1-1-image">
+
+
+
+
+
+ <div class="title">
+    <h1>멧비둘기</h1>
+    
+    </div> 
+    
+    
+    <div class="center-dropdown2-wrapper">
+    <div class="dropdown">
+        <a href="#" class="dropbtn center-nav-item">다른 동물 보러가기</a>
+        
+        <div class="dropdown-content center-dropdown-content">
+            <a href="Animal1.html">청설모</a>
+            <a href="Animal2.html">고라니</a>
+            <a href="Animal4.html">너구리</a>
+            <a href="Animal5.html">왜가리</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="text1">
+    <h2>멧비둘기에 대하여</h2><br>
+    <p>
+멧비둘기는 도심에서 자주 볼 수 있는 바위비둘기와 다르게 본래부터 대한민국에 서식하던 텃새로, <br>도시 외곽이나 뒷산 등지에서 어렵지 않게 볼 수 있다. 몸집이 바위비둘기보다 작고 날씬하며, <br>목 옆에 검은색과 흰색 줄무늬가 있는 것이 특징이다. 씨앗, 곡식, 열매 등 식물성 먹이를 주로 섭취한다.<br><br>
+
+멧비둘기도 다른 비둘기들처럼 아파트 베란다 실외기 등에 둥지를 트는 경우가 있다. 그러지 못하도록 <br>방조망이나 뾰족한 철사 등을 설치해 미리 방지하는 것을 권장한다.<br> <br>비둘기의 배설물은 강한 산성으로 건물이나 구조물을 부식시키고 질병을 유발하기 때문에 <br>가까이 살지 않도록 주의하는 것이 좋다.<br>
+</p>
+</div>
+
+
+
+
+
+	<style>
+	/* 브라우저 마진과 패딩 리셋 */
+	* {margin:0;padding:0;}
+
+	/* INPUT 가리기 */
+/* 🌟🌟🌟 수정 1: 슬라이드 영역의 크기 및 절대 위치 지정 (350x350) 🌟🌟🌟 */
+	.section .slidewrap {
+	    max-width:900px; /* 가로 최대 크기 제한 */
+	    width: 660px; /* 고정 가로 크기 */
+	    height: 700px; /* 고정 세로 크기 */
+	    
+	    position: absolute; /* 위치 지정 방식 */
+	    top: 120px; /* 상단에서 100px */
+	    right: 10px; /* 왼쪽에서 50px */
+	    
+	    margin: 0; /* 기존 중앙 정렬 마진 제거 */
+	    overflow:hidden;
+	}
+	
+	/* 🌟🌟🌟 수정 2: 슬라이드 목록 및 아이템 높이 지정 🌟🌟🌟 */
+	.section .slidelist {
+	    white-space:nowrap;
+	    font-size:0;
+	    height: 700px; /* slidewrap 높이에 맞춤 */
+	}
+	.section .slidelist > li {
+	    display:inline-block;
+	    vertical-align:middle;
+	    width:100%;
+	    height: 700px; /* slidewrap 높이에 맞춤 */
+	    transition:all .5s;
+	}
+	.section .slidelist > li > a {
+	    display:block;
+	    position:relative;
+	    height: 100%; /* li 높이에 맞춤 */
+	}
+    
+    /* 🌟🌟🌟 추가: 이미지가 잘리지 않도록 (contain) 설정 🌟🌟🌟 */
+    .section .slidelist > li > a > img {
+        width: 100%;
+        height: 100%;
+        /* 이미지가 잘리지 않도록 (contain), 영역 내에 모두 표시합니다. */
+        object-fit: contain; 
+    }
+
+
+	/* 좌우로 넘기는 LABEL버튼에 대한 스타일 */
+	.section .slide-control {position:absolute;top:0;left:0;z-index:10;width:100%;height:100%;}
+	.section .slide-control label {position:absolute;z-index:1;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+	.section .slide-control .left {left:30px;background:url('./img/left.png') center center / 100% no-repeat;}
+	.section .slide-control .right {right:30px;background:url('./img/right.png') center center / 100% no-repeat;}
+	.section .slide-control [class*="control"] {display:none;}
+
+	/* INPUT이 체크되면 변화값이 li까지 전달되는 스타일 */
+	.section [id="멧비둘기2"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+	.section [id="멧비둘기3"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+	.section [id="멧비둘기4"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+	
+	/* INPUT이 체크되면 변화값이 좌우 슬라이드 버튼을 담고 있는 div 까지 전달되는 스타일 */
+	.section [id="멧비둘기2"]:checked ~ .slidewrap .control01 {display:block;}
+	.section [id="멧비둘기3"]:checked ~ .slidewrap .control02 {display:block;}
+	.section [id="멧비둘기4"]:checked ~ .slidewrap .control03 {display:block;}
+	</style>
+</head>
+<body>
+<div class="section">
+	<input type="radio" name="slide" id="멧비둘기2" checked>
+	<input type="radio" name="slide" id="멧비둘기3">
+	<input type="radio" name="slide" id="멧비둘기4">
+	<div class="slidewrap">
+		<ul class="slidelist">
+			<li>
+				<a>
+					<img src="./img/멧비둘기2.jpg">
+				</a>
+			</li>
+			<li>
+				<a>
+					<img src="./img/멧비둘기3.jpg">
+				</a>
+			</li>
+			<li>
+				<a>
+					<img src="./img/멧비둘기4.jpg">
+				</a>
+			</li>
+		</ul>
+
+		<div class="slide-control">
+			<div class="control01">
+				<label for="멧비둘기4" class="left"></label>
+				<label for="멧비둘기3" class="right"></label>
+			</div>
+			<div class="control02">
+				<label for="멧비둘기2" class="left"></label>
+				<label for="멧비둘기4" class="right"></label>
+			</div>
+			<div class="control03">
+				<label for="멧비둘기3" class="left"></label>
+				<label for="멧비둘기2" class="right"></label>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
