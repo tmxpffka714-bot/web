@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OX 공존 퀴즈</title>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="top-navbar">
+        <a href="index.html" class="nav-button">메인 홈</a>
+        <a href="Animal1.html" class="nav-button">청설모</a>
+        <a href="Animal2.html" class="nav-button">고라니</a>
+        <a href="Animal3.html" class="nav-button">멧비둘기</a>
+        <a href="Animal4.html" class="nav-button">너구리</a>
+        <a href="Animal5.html" class="nav-button">왜가리</a>
+        <a href="quiz.html" class="nav-button">공존 퀴즈</a>
+    </nav>
+
+
+<title>공존 퀴즈</title>
+    
+ <style>
+  
+    body { display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        min-height: 100vh; 
+        margin: 0;
+        background-color: #e0f7fa; 
+        font-family: sans-serif;}
+    
+    .quiz-box { padding: 30px;
+        background-color: white;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;}
+
+ 
+    button {padding: 10px 20px;
+        margin: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        color: white;
+        background-color: #6baa2c;}
+    
+    #feedback {margin-top: 10px;
+        font-weight: bold;}
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="quiz-box">
+    <h3>공존 퀴즈</h3>
+
+<div id="설명문1">
+        <p> 1. 청설모는 먹이를 구하기 힘들기 때문에 사람이 제공해줘야한다.<br>
+    <br>2. 고라니는 예민한 동물이기에 마주쳤을 때 위협해서는 안 된다.<br>
+    <br>3. 멧비둘기의 서식지는 줄어들기 때문에 건물에 둥지를 틀 수 있게 해야한다.<br>
+    <br>4. 너구리는 광견병의 메개체가 될 수 있다.<br>
+    <br>5. 다친 왜가리를 발견하면 빨리 직접 구조해야 한다. <br><br></p>
+    </div>
+
+    <div id="설명문2" style="display: none;">
+        <h4>정답</h4>
+        <p>1. 청설모는 먹이를 구하기 힘들기 때문에 사람이 제공해줘야한다.: X<br>
+    <br>2. 고라니는 예민한 동물이기에 마주쳤을 때 위협해서는 안 된다.: O <br>
+    <br>3. 멧비둘기의 서식지는 줄어들기 때문에 건물에 둥지를 틀 수 있게 해야한다.: X<br>
+    <br>4. 너구리는 광견병의 메개체가 될 수 있다.: O<br>
+    <br>5. 다친 왜가리를 발견하면 빨리 직접 구조해야 한다.: X <br><br></p>
+    </div>
+
+    <button onclick="전환기능()">정답 보기</button>
+    <button onclick="  location.reload()">처음으로</button>
+
+
+
+<script>
+
+    const 설명1 = document.getElementById('설명문1');
+    const 설명2 = document.getElementById('설명문2');
+    
+    function 전환기능() { 설명1.style.display = 'none'; 
+        설명2.style.display = 'block'; }
+</script>
+
+</body>
+</html>

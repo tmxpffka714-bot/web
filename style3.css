@@ -1,0 +1,44 @@
+
+body 
+{margin: 0;
+    font-family: 'Gowun Batang', 'Malgun Gothic', 'serif' !important;
+    background-image: url('배경.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;}
+
+
+.top-navbar 
+{width: 100%;
+    background-color: #3e301c; 
+    padding: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+    display: flex;
+    justify-content: space-around; 
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;}
+
+
+.nav-button 
+{color: #ffffff; 
+    text-decoration: none; 
+    padding: 10px 15px;
+    border-radius: 0px;
+    transition: background-color 0.3s;
+    white-space: nowrap; }
+
+
+.nav-button:hover 
+{text-shadow:    
+        0 0 8px rgba(255, 255, 255, 1.0),
+        0 0 17px rgba(255, 255, 255, 0.9);}
+
+
+main 
+{padding-top: 60px;
+    text-align: center;}
